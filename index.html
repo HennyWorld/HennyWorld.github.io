@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Purple Maze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas for the animated background -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Title with particle effects -->
+    <div id="titleContainer">
+        <h1 id="mainTitle">The Purple Maze</h1>
+    </div>
+
+    <!-- Settings Icon -->
+    <div id="settingsIconContainer">
+        <img src="settings-icon.png" alt="Settings" id="settingsIcon">
+    </div>
+
+    <!-- Settings panel (hidden by default, will be toggled by JavaScript) -->
+    <div id="settingsPanel">
+        <h2>Settings</h2>
+        <label for="frameRate">Frame Rate: </label>
+        <input type="number" id="frameRate" value="60" min="0" max="144">
+        <br>
+        <label for="saveHistory">Save History: </label>
+        <input type="checkbox" id="saveHistory">
+        <br>
+        <label for="username">Username: </label>
+        <input type="text" id="username" placeholder="Enter your username">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
