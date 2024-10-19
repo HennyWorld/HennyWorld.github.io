@@ -1,0 +1,118 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scroll if needed */
+}
+
+/* Canvas Background */
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Sits behind everything */
+}
+
+/* Title */
+#titleContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+#mainTitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: #9400d3; /* Deep purple */
+    text-shadow: 0px 0px 10px #9400d3, 0px 0px 20px #9400d3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0px 0px 10px #9400d3, 0px 0px 20px #9400d3;
+    }
+    50% {
+        text-shadow: 0px 0px 20px #b64fc8, 0px 0px 30px #b64fc8;
+    }
+    100% {
+        text-shadow: 0px 0px 10px #9400d3, 0px 0px 20px #9400d3;
+    }
+}
+
+/* Settings Icon */
+#settingsIconContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+#settingsIcon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px #9400d3);
+    transition: filter 0.3s ease-in-out;
+}
+
+#settingsIcon:hover {
+    filter: drop-shadow(0px 0px 15px #b64fc8);
+}
+
+/* Settings Panel */
+#settingsPanel {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #9400d3;
+    display: none; /* Hidden by default */
+    z-index: 3;
+}
+
+#settingsPanel h2 {
+    color: #9400d3;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+}
+
+#settingsPanel label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#settingsPanel input[type="number"],
+#settingsPanel input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#settingsPanel input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Glowing Borders for Inputs */
+#settingsPanel input[type="number"]:focus,
+#settingsPanel input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #9400d3;
+}
+
