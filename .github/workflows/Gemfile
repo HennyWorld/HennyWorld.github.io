@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
 gem 'jekyll'
 gem 'github-pages', group: :jekyll_plugin
+git add Gemfile
+git commit -m "Add Gemfile for Jekyll dependencies"
+git push
