@@ -18,7 +18,18 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'  # Ensure this matches the version specified in your Gemfile
+        ruby-version: '2.7'
+
+    - name: Cache gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - name: Install dependencies
+      run: bundle install
 
     - name: Build site
       run: bundle exec jekyll build
